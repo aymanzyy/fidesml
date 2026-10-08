@@ -5,12 +5,12 @@ Fides In-Transit ML work, as part of IPDPS 2027 submission
 
 Details: 
 - Experiment Overview: Measure the runtimes across both producer/solver side of things and consumer/model side of things
-- Directory:
+- Directories
   - For Fides work: channel_flow_1d_fides 
   - For Redis work: channel_flow_1d_redis
  
 - Scripts:
-  -  Redis Training:
+  -  Redis Training
     - Catalyst Adaptor class: channel_adaptor.py
   	- Combined runscript for running solver/model-side: inference_run.sh
   	- Combined runscript for running solver/model-side: train_run.sh
@@ -19,7 +19,7 @@ Details:
   	- Standalone model training script: run_training.py
   	- Standalone model inference script: run_inference.py
 
-  - Fides Training:
+  - Fides Training
     - Config file for setting blocking execution: adios2_prac_config.xml
     - Solver-side pipeline script for training and inference, write data to ADIOS2: catalyst_channel_ml_fides.py
     - Definition of Catalyst's core functions (for BP engine): catalyst_channel_ml_fides_bp.py
