@@ -87,3 +87,18 @@ Details:
 Details: 
 - Experiment Overview: Instrument in-transit visualization to exercise the ParaView/Fides/Catalyst/ADIOS2 piping
 - Solver Description: Proxy-application for LLNL's production ALE3D code that models the Sedov blast problem.
+- Directory:
+
+- Scripts:
+  - Runscript for running analysis endpoint: reader_run.sh
+  - Runscript for running solver endpoint: writer_run.sh
+  - Example compile script: rebuild.sh
+  - LULESH Communication code: Version0/lulesh-comm.cc
+  - LULESH Initialization code: Version0/lulesh-init.cc
+  - LULESH Visualization code: Version0/lulesh-viz.cc
+  - Main LUELSH driver code: Version0/lulesh.cc/.h
+  - Standalone Python script for pulling data from ADIOS2 via Fides: read_from_fides.py
+  - Standalone Python script for pulling data from ADIOS2 via Fides with BP engine: read_from_fides_bp.py
+  - Catalyst Pipeline script for rendering: reader_create_image.py
+  - Catalyst Pipeline script to write data to ADIOS2 via Fides: write_to_fides.py
+  - Catalyst Pipeline script to write data to ADIOS2 via Fides (BP engine): write_to_fides_bp.py
