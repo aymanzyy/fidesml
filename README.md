@@ -11,9 +11,9 @@ Details:
  
 - Scripts:
   -  Redis Training
-    - Catalyst Adaptor class: channel_adaptor.py
-    - Combined runscript for running solver/model-side: inference_run.sh
-    - Combined runscript for running solver/model-side: train_run.sh
+    -  Catalyst Adaptor class: channel_adaptor.py
+    -  Combined runscript for running solver/model-side: inference_run.sh
+    -   Combined runscript for running solver/model-side: train_run.sh
     - Multilayer perceptron model: model.py
     - Solver-side pipeline script for training and inference, write data to Redis: catalyst_channel_ml.py
     - Standalone model training script: run_training.py
