@@ -1,0 +1,73 @@
+{
+  "unstructured_grid": {
+    "data_sources": [
+      {
+        "name": "source",
+        "filename_mode": "input"
+      }
+    ],
+    "step_information": {
+            "data_source": "source"
+    },
+    "coordinate_system": {
+        "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "coordinates"
+        }
+    },
+    "cell_set": {
+        "cell_set_type": "single_type",
+        "cell_type": "line",
+        "data_source": "source",
+        "variable": "connectivity"
+    },
+    "fields": [
+        {
+            "name": "u_plus",
+            "association": "points",
+            "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "u_plus"
+            }
+        },
+        {
+            "name": "y_plus",
+            "association": "points",
+            "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "y_plus"
+            }
+        },
+        {
+            "name": "du_dy",
+            "association": "points",
+            "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "du_dy"
+            }
+        },
+        {
+            "name": "nu_t",
+            "association": "points",
+            "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "nu_t"
+            }
+        },
+        {
+            "name": "coords_2d",
+            "association": "points",
+            "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "coords_2d"
+            }
+        }
+    ]
+  }
+}

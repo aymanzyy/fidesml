@@ -1,0 +1,37 @@
+{
+  "unstructured_grid": {
+    "data_sources": [
+      {
+        "name": "source",
+        "filename_mode": "input"
+      }
+    ],
+    "step_information": {
+            "data_source": "source"
+    },
+    "coordinate_system": {
+        "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "coordinates"
+        }
+    },
+    "cell_set": {
+        "cell_set_type": "single_type",
+        "cell_type": "hexahedron",
+        "data_source": "source",
+        "variable": "connectivity"
+    },
+    "fields": [
+        {
+            "name": "velocity",
+            "association": "points",
+            "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "velocity"
+            }
+        }
+    ]
+  }
+}

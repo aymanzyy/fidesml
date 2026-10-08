@@ -1,0 +1,66 @@
+{
+  "unstructured_grid_single_cell_type": {
+    "data_sources": [
+      {
+        "name": "source",
+        "filename_mode": "input"
+      }
+    ],
+    "step_information": {
+            "data_source": "source",
+            "engine_type": "BPFile",
+            "filename": "/home/local/KHQ/ayman.yousef/Downloads/ayman_internship_work/ayman_internship_work/test_write.bp"
+    },
+    "coordinate_system": {
+        "array": {
+            "array_type": "basic",
+            "data_source": "source",
+            "variable": "coords"
+        }
+    },
+    "cell_set": {
+        "cell_set_type": "single_type",
+        "cell_type": "line",
+        "data_source": "source",
+        "variable": "connectivity"
+    },
+    "fields": [
+        {
+            "name": "u_plus",
+            "association": "points",
+            "array": {
+                "array_type": "basic",
+                "data_source": "source",
+                "variable": "u_plus"
+            }
+        },
+        {
+            "name": "du_dy",
+            "association": "points",
+            "array": {
+                "array_type": "basic",
+                "data_source": "source",
+                "variable": "du_dy"
+            }
+        },
+        {
+            "name": "nu_t",
+            "association": "points",
+            "array": {
+                "array_type": "basic",
+                "data_source": "source",
+                "variable": "nu_t"
+            }
+        },
+        {
+            "name": "coords_2d",
+            "association": "points",
+            "array": {
+                "array_type": "basic",
+                "data_source": "source",
+                "variable": "coords_2d"
+            }
+        }
+    ]
+  }
+}
