@@ -12,12 +12,12 @@ Details:
 - Scripts:
   -  Redis Training
     - Catalyst Adaptor class: channel_adaptor.py
-  	- Combined runscript for running solver/model-side: inference_run.sh
-  	- Combined runscript for running solver/model-side: train_run.sh
-  	- Multilayer perceptron model: model.py
-  	- Solver-side pipeline script for training and inference, write data to Redis: catalyst_channel_ml.py
-  	- Standalone model training script: run_training.py
-  	- Standalone model inference script: run_inference.py
+    - Combined runscript for running solver/model-side: inference_run.sh
+    - Combined runscript for running solver/model-side: train_run.sh
+    - Multilayer perceptron model: model.py
+    - Solver-side pipeline script for training and inference, write data to Redis: catalyst_channel_ml.py
+    - Standalone model training script: run_training.py
+    - Standalone model inference script: run_inference.py
 
   - Fides Training
     - Config file for setting blocking execution: adios2_prac_config.xml
