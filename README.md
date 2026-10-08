@@ -9,30 +9,30 @@ Details:
   - For Fides work: channel_flow_1d_fides 
   - For Redis work: channel_flow_1d_redis
  
-- Scripts:
-  -  Redis Training
-    -  Catalyst Adaptor class: channel_adaptor.py
-    -  Combined runscript for running solver/model-side: inference_run.sh
-    -   Combined runscript for running solver/model-side: train_run.sh
-    - Multilayer perceptron model: model.py
-    - Solver-side pipeline script for training and inference, write data to Redis: catalyst_channel_ml.py
-    - Standalone model training script: run_training.py
-    - Standalone model inference script: run_inference.py
+- Fides Scripts:
+  - Config file for setting blocking execution: adios2_prac_config.xml
+  - Solver-side pipeline script for training and inference, write data to ADIOS2: catalyst_channel_ml_fides.py
+  - Definition of Catalyst's core functions (for BP engine): catalyst_channel_ml_fides_bp.py
+  - Catalyst Adaptor class: channel_adaptor.py
+  - Solver-side runscript, initiate inference execution: fides_inference_run.sh
+  - Model-side runscript, execute inference: fides_run_inference.sh
+  - Model-side runscript, execute model training: fides_run_training.sh
+  - Solver-side runscript, initiate training execution: fides_train_run.sh
+  - JSON file describing data schema: flow.json
+  - JSON file describing data schema: flow_bp.json
+  - Standalone model inference script (with optional passback to solver): run_inference_fides.py
+  - Standalone model training script: run_training_fides.py
+  - Multilayer perceptron model: model.py
 
-  - Fides Training
-    - Config file for setting blocking execution: adios2_prac_config.xml
-    - Solver-side pipeline script for training and inference, write data to ADIOS2: catalyst_channel_ml_fides.py
-    - Definition of Catalyst's core functions (for BP engine): catalyst_channel_ml_fides_bp.py
-    - Catalyst Adaptor class: channel_adaptor.py
-    - Solver-side runscript, initiate inference execution: fides_inference_run.sh
-    - Model-side runscript, execute inference: fides_run_inference.sh
-    - Model-side runscript, execute model training: fides_run_training.sh
-    - Solver-side runscript, initiate training execution: fides_train_run.sh
-    - JSON file describing data schema: flow.json
-    - JSON file describing data schema: flow_bp.json
-    - Standalone model inference script (with optional passback to solver): run_inference_fides.py
-    - Standalone model training script: run_training_fides.py
-    - Multilayer perceptron model: model.py
+-  Redis Training:
+  -  Catalyst Adaptor class: channel_adaptor.py
+  -  Combined runscript for running solver/model-side: inference_run.sh
+  - Combined runscript for running solver/model-side: train_run.sh
+  - Multilayer perceptron model: model.py
+  - Solver-side pipeline script for training and inference, write data to Redis: catalyst_channel_ml.py
+  - Standalone model training script: run_training.py
+  - Standalone model inference script: run_inference.py
+  
  - XML for Setting the Blocking Config: adios2_prac_config.xml
    
 ## 2D LBM Proxy
