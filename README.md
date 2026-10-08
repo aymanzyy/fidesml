@@ -34,7 +34,7 @@ Details:
   - Standalone model inference script: run_inference.py
   
  - XML for Setting the Blocking Config: adios2_prac_config.xml
-   
+ ---  
 ## 2D LBM Proxy
 
 Details: 
@@ -60,7 +60,7 @@ Details:
     - For a solver steering example: steer_model_train_and_query.ipynb
     - For model LR change: change_auto_encoder_lr.ipynb
   
-
+---
 ## 3D FE Solver
 
 Details: 
@@ -82,7 +82,7 @@ Details:
   - Catalyst Pipelinescript accompanying solver execution (SST): write_to_fides.py
   - Catalyst Pipelinescript accompanying solver execution (BP): write_to_fides_bp.py
     
-
+---
 ## LULESH
 Details: 
 - Experiment Overview: Instrument in-transit visualization to exercise the ParaView/Fides/Catalyst/ADIOS2 piping
@@ -102,3 +102,26 @@ Details:
   - Catalyst Pipeline script for rendering: reader_create_image.py
   - Catalyst Pipeline script to write data to ADIOS2 via Fides: write_to_fides.py
   - Catalyst Pipeline script to write data to ADIOS2 via Fides (BP engine): write_to_fides_bp.py
+ ---
+## Example Build Instructions: 
+
+### Catalyst Stub
+
+```
+cmake -S ./catalyst -B ./catalyst_build -G Ninja -DCATALYST_USE_MPI=ON -DCATALYST_WRAP_PYTHON=ON -DPython3_ROOT_DIR=/usr/lib/python3.12 -Wno-dev
+```
+
+### ADIOS2
+
+```
+mkdir adios2-build && cd adios2-build
+cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$HOME/.local -DADIOS2_BUILD_EXAMPLES=ON -DADIOS2_USE_CATALYST=ON -Dcatalyst_DIR=/path/to/catalyst_intall/lib/cmake/catalyst-2.1 -DADIOS2_USE_MPI=ON ../ADIOS2
+
+ninja install
+
+```
+### ParaView w/Fides 
+
+```
+cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DPARAVIEW_ENABLE_FIDES=ON -ADIOS2_ROOT -DPARAVIEW_USE_PYTHON=ON -DPARAVIEW_USE_MPI=ON -DPARAVIEW_ENABLE_CATALYST=ON -DPARAVIEW_USE_QT=OFF -Dcatalyst_DIR="/path/to/catalyst_intall/lib/cmake/catalyst-2.1" -DCMAKE_CUDA_ARCHITECTURES=native -DVTK_USE_CUDA=ON /home/local/KHQ/ayman.yousef/Downloads/paraview_new_fides_writer/paraview
+```
